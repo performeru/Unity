@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638369346237125991
-    m_Hash: 801009254
+      ticks: 638402046816294341
+    m_Hash: 2489963709
   m_LockFileStatus:
     m_FilePath: "C:/Users/perfo/OneDrive/\uBC14\uD0D5 \uD654\uBA74/UnityGame/ZombieGame/Zombie
       Survival/Packages/packages-lock.json"
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638399520706052074
-    m_Hash: 3148550420
+      ticks: 638402047154726094
+    m_Hash: 3153737417
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -130,24 +130,29 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.0
     nextVersion: 
-- packageId: com.unity.ads@3.7.1
+- packageId: com.unity.ads@4.4.2
   testable: 0
   isDirectDependency: 1
-  version: 3.7.1
+  version: 4.4.2
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.ads@3.7.1"
+    Survival\\Library\\PackageCache\\com.unity.ads@4.4.2"
   assetPath: Packages/com.unity.ads
   name: com.unity.ads
-  displayName: Advertisement
+  displayName: Advertisement Legacy
   author:
     name: 
     email: 
     url: 
   category: 
   type: asset
-  description: Unity Ads is a video ad network for iOS and Android that allows you
-    to quickly and effectively monetize your games.
+  description: "Connect your game to the Unity Ads Network for iOS and Android to
+    quickly and effectively monetize your games.\n\nNOTE: Unity has joined forces
+    with ironSource and recommends using Unity LevelPlay for ad mediation (instead
+    of this package). \n\nThis package will still be supported but no longer updated.
+    To install Unity LevelPlay, use the Ads Mediation package (available below) or
+    the LevelPlay plugin-in at https://developers.is.com/ironsource-mobile/unity/unity-plugin/.\n\nSupported
+    platforms:\n- Android\n- iOS\n"
   status: 0
   errors: []
   versions:
@@ -226,24 +231,24 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637533483430000000
-  documentationUrl: 
+  datePublishedTicks: 638161229410000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.ads@4.4/manual/index.html
   hasRepository: 1
   repository:
     type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.ads.git
-    revision: 95ec369d16df431f8c9ebbb83c0f65dc4471f07e
+    url: https://github.com/Unity-Technologies/unity-ads-sdk.git
+    revision: 532b2db792ae728eedcc825080876b4e2c5f8544
     path: 
   unityLifecycle:
     version: 4.4.2
     nextVersion: 
-- packageId: com.unity.analytics@3.5.3
+- packageId: com.unity.analytics@3.6.12
   testable: 0
   isDirectDependency: 1
-  version: 3.5.3
+  version: 3.6.12
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.analytics@3.5.3"
+    Survival\\Library\\PackageCache\\com.unity.analytics@3.6.12"
   assetPath: Packages/com.unity.analytics
   name: com.unity.analytics
   displayName: Analytics Library
@@ -325,24 +330,24 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637381916200000000
+  datePublishedTicks: 637692274360000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.analytics.git
-    revision: 02d361e53eda59ceb7d02ba9bd15ff55a093ad83
+    revision: 16fe75b69f168b066926595ade9b0473c3b32c5f
     path: 
   unityLifecycle:
     version: 3.6.12
     nextVersion: 
-- packageId: com.unity.cinemachine@2.8.0
+- packageId: com.unity.cinemachine@2.8.9
   testable: 0
   isDirectDependency: 1
-  version: 2.8.0
+  version: 2.8.9
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.cinemachine@2.8.0"
+    Survival\\Library\\PackageCache\\com.unity.cinemachine@2.8.9"
   assetPath: Packages/com.unity.cinemachine
   name: com.unity.cinemachine
   displayName: Cinemachine
@@ -444,8 +449,18 @@ m_ResolvedPackages:
     - 2.9.5
     - 2.9.7
     verified: 2.8.9
-  dependencies: []
-  resolvedDependencies: []
+  dependencies:
+  - name: com.unity.test-framework
+    version: 1.1.31
+  resolvedDependencies:
+  - name: com.unity.test-framework
+    version: 1.1.33
+  - name: com.unity.ext.nunit
+    version: 1.0.6
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
   keywords:
   - camera
   - follow
@@ -479,24 +494,24 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637623123140000000
+  datePublishedTicks: 637975495930000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: git+https://github.com/Unity-Technologies/com.unity.cinemachine.git
-    revision: 7b21dbadbb998b548e730ef5f6c084940a9d82c0
+    url: https://github.com/Unity-Technologies/com.unity.cinemachine.git
+    revision: 92bcde243d623d77c64960a552f29396770af1e1
     path: 
   unityLifecycle:
     version: 2.8.9
     nextVersion: 
-- packageId: com.unity.collab-proxy@1.7.1
+- packageId: com.unity.collab-proxy@2.2.0
   testable: 0
   isDirectDependency: 1
-  version: 1.7.1
+  version: 2.2.0
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.collab-proxy@1.7.1"
+    Survival\\Library\\PackageCache\\com.unity.collab-proxy@2.2.0"
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -505,11 +520,10 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Editor
-  type: asset
-  description: The Version Control package gives you the ability to use either Collaborate
-    or Plastic SCM for Unity (beta) in the Unity editor. To use Plastic SCM for Unity
-    (beta), a Plastic SCM subscription is required. Learn more about how you can
-    get started for free by visiting plasticscm.com.
+  type: assets
+  description: The package gives you the ability to use Unity Version Control in
+    the Unity editor. To use Unity Version Control, a subscription is required. Learn
+    more about how you can get started for free by visiting https://unity.com/solutions/version-control
   status: 0
   errors: []
   versions:
@@ -587,12 +601,8 @@ m_ResolvedPackages:
     compatible:
     - 2.2.0
     verified: 2.2.0
-  dependencies:
-  - name: com.unity.nuget.newtonsoft-json
-    version: 2.0.0
-  resolvedDependencies:
-  - name: com.unity.nuget.newtonsoft-json
-    version: 3.2.1
+  dependencies: []
+  resolvedDependencies: []
   keywords:
   - backup
   - cloud
@@ -600,6 +610,7 @@ m_ResolvedPackages:
   - collaborate
   - collaboration
   - control
+  - devops
   - plastic
   - plasticscm
   - source
@@ -617,24 +628,24 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637616921650000000
-  documentationUrl: 
+  datePublishedTicks: 638326189440000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.2/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 30ef59f552633de9ff0401db4e73ac89982d4ac0
+    revision: 33c8fba1793946be3c73f738edf70db0b5546afd
     path: 
   unityLifecycle:
     version: 2.2.0
     nextVersion: 
-- packageId: com.unity.ide.rider@3.0.7
+- packageId: com.unity.ide.rider@3.0.26
   testable: 0
   isDirectDependency: 1
-  version: 3.0.7
+  version: 3.0.26
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.ide.rider@3.0.7"
+    Survival\\Library\\PackageCache\\com.unity.ide.rider@3.0.26"
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -643,7 +654,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: assets
   description: The JetBrains Rider Editor package provides an integration for using
     the JetBrains Rider IDE as a code editor for Unity. It adds support for generating
     .csproj files for code completion and auto-discovery of installations.
@@ -713,24 +724,24 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637572251600000000
-  documentationUrl: 
+  datePublishedTicks: 638326061920000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: 3007c42a679bbe2c082c276e8d79279110964553
+    revision: 2b29b1152946c13d1ecebf6fc681a59cd8b4d399
     path: 
   unityLifecycle:
     version: 3.0.26
     nextVersion: 
-- packageId: com.unity.ide.visualstudio@2.0.9
+- packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 1
-  version: 2.0.9
+  version: 2.0.22
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.9"
+    Survival\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.22"
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -739,7 +750,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: assets
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -779,7 +790,7 @@ m_ResolvedPackages:
     version: 1.1.9
   resolvedDependencies:
   - name: com.unity.test-framework
-    version: 1.1.26
+    version: 1.1.33
   - name: com.unity.ext.nunit
     version: 1.0.6
   - name: com.unity.modules.imgui
@@ -797,24 +808,24 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637580705480000000
-  documentationUrl: 
+  datePublishedTicks: 638326061910000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: c7cd4c6319806423b3d918b3e9599244e3993d41
+    revision: 700b44077345e97d37d464ff25507638983aed64
     path: 
   unityLifecycle:
     version: 2.0.22
     nextVersion: 
-- packageId: com.unity.ide.vscode@1.2.3
+- packageId: com.unity.ide.vscode@1.2.5
   testable: 0
   isDirectDependency: 1
-  version: 1.2.3
+  version: 1.2.5
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.ide.vscode@1.2.3"
+    Survival\\Library\\PackageCache\\com.unity.ide.vscode@1.2.5"
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -860,24 +871,24 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637394922300000000
+  datePublishedTicks: 637800255360000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-    revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
+    url: https://github.com/Unity-Technologies/com.unity.ide.vscode.git
+    revision: b0740c80bfc2440527c317109f7c3d9100132722
     path: 
   unityLifecycle:
     version: 1.2.5
     nextVersion: 
-- packageId: com.unity.postprocessing@3.1.1
+- packageId: com.unity.postprocessing@3.2.2
   testable: 0
   isDirectDependency: 1
-  version: 3.1.1
+  version: 3.2.2
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.postprocessing@3.1.1"
+    Survival\\Library\\PackageCache\\com.unity.postprocessing@3.2.2"
   assetPath: Packages/com.unity.postprocessing
   name: com.unity.postprocessing
   displayName: Post Processing
@@ -954,24 +965,24 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637576678760000000
+  datePublishedTicks: 637855259850000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: git+https://github.com/Unity-Technologies/Graphics.git
-    revision: 075b452f2c4bf910a168632b3cedbd6835477ddd
+    url: https://github.com/Unity-Technologies/Graphics.git
+    revision: 815ce78463c7d3006fa97cd6e8898d91cb9c3ebf
     path: 
   unityLifecycle:
     version: 3.2.2
     nextVersion: 
-- packageId: com.unity.test-framework@1.1.26
+- packageId: com.unity.test-framework@1.1.33
   testable: 0
   isDirectDependency: 1
-  version: 1.1.26
+  version: 1.1.33
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.test-framework@1.1.26"
+    Survival\\Library\\PackageCache\\com.unity.test-framework@1.1.33"
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -1082,13 +1093,13 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637576439750000000
+  datePublishedTicks: 637938212700000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
-    revision: ea9d07e64e6d63c4f2fd8b6bc57df0f452ff4fae
+    url: https://github.com/Unity-Technologies/com.unity.test-framework.git
+    revision: 34a4d423d64926635eb36d3bb86276179cc186e1
     path: 
   unityLifecycle:
     version: 1.1.33
@@ -1269,13 +1280,13 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.0.6
     nextVersion: 
-- packageId: com.unity.timeline@1.6.1
+- packageId: com.unity.timeline@1.6.5
   testable: 0
   isDirectDependency: 1
-  version: 1.6.1
+  version: 1.6.5
   source: 1
   resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.timeline@1.6.1"
+    Survival\\Library\\PackageCache\\com.unity.timeline@1.6.5"
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1429,13 +1440,13 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637604838080000000
-  documentationUrl: 
+  datePublishedTicks: 638182037450000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.timeline@1.6/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-    revision: ccea23bade4d6b41fde01c1048405118cbec8ed5
+    revision: 4ed67a7e62ce940db3d44dc5eca8fade1c664aed
     path: 
   unityLifecycle:
     version: 1.6.5
@@ -3427,62 +3438,4 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.0.6
-    nextVersion: 
-- packageId: com.unity.nuget.newtonsoft-json@3.2.1
-  testable: 0
-  isDirectDependency: 0
-  version: 3.2.1
-  source: 1
-  resolvedPath: "C:\\Users\\perfo\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\ZombieGame\\Zombie
-    Survival\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1"
-  assetPath: Packages/com.unity.nuget.newtonsoft-json
-  name: com.unity.nuget.newtonsoft-json
-  displayName: Newtonsoft Json
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: library
-  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
-    synced to version 13.0.2.
-
-
-    This package is used for advanced json serialization
-    and deserialization. Most Unity users will be better suited using the existing
-    json tools built into Unity.
-
-    To avoid assembly clashes, please use this
-    package if you intend to use Newtonsoft Json.'
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 3.2.1
-    compatible:
-    - 3.2.1
-    verified: 3.2.1
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
-    revision: d8e49aef8979bef617144382052ec2f479645eaf
-    path: 
-  unityLifecycle:
-    version: 3.2.1
     nextVersion: 
