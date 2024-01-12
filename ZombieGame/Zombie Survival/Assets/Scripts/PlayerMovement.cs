@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     // 입력값에 따라 캐릭터를 앞뒤로 움직임
     private void Move() 
     {
-        Vector3 moveDistance = playerInput.move * transform * moveSpeed * Time.deltaTime;
+        Vector3 moveDistance = playerInput.move * transform.forward * moveSpeed * Time.deltaTime;
         playerRigidbody.MovePosition(playerRigidbody.position + moveDistance);
     }
 
