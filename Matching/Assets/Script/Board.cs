@@ -11,10 +11,12 @@ public class Board : MonoBehaviour
     private Sprite[] cardSprites;
 
     private List<int> cardIDList = new List<int>();
+    private List<Card> cardList = new List<Card>();
 
     void Start()
     {
         GenerateCardID();
+        ShuffleCardID();
         InitBoard();
     }
 
@@ -27,7 +29,19 @@ public class Board : MonoBehaviour
             cardIDList.Add(i);
             cardIDList.Add(i);
         }
+    }
 
+    void ShuffleCardID()
+    {
+        int cardCount = cardIDList.Count;
+
+        for(int i = 0; i < cardCount; i++)
+        {
+            int randomIndex = Random.Range(i, cardCount);
+            int temp = cardIDList[randomIndex];
+            cardIDList[randomIndex] = cardIDList[i];
+            cardIDList[i] = temp;
+        }
     }
 
     void InitBoard()
@@ -54,8 +68,13 @@ public class Board : MonoBehaviour
                 card.SetCardID(cardID);
                 card.SetAnimalSprite(cardSprites[cardID]);
                 cardIndex++;
+                cardList.Add(card);
             }
         }
-
     }    
+
+    public List<Card> GetCards()
+    {
+        return cardList;
+    }
 }
