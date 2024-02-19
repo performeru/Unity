@@ -46,8 +46,8 @@ public class Board : MonoBehaviour
 
     void InitBoard()
     {
-        float spaceY = 1.9f;
-        float spaceX = 1.3f;
+        float spaceY = 1.7f;
+        float spaceX = 1.4f;
 
         int rowCount = 6;
         int colCount = 4;

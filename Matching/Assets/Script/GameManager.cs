@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,9 +12,28 @@ public class GameManager : MonoBehaviour
     private Card flippedCard;
     private bool isFlipping = false;
 
+    [SerializeField]
+    private Slider timeoutSlider;
+    [SerializeField]
+    private float timeLimit = 60f;
+
+    private float currentTime;
+    private int totalMatches = 12;
+    private int matchesFound = 0;
+
+    [SerializeField]
+    private TextMeshProUGUI timeoutText;
+    [SerializeField]
+    private TextMeshProUGUI gameOverText;
+
+    [SerializeField]
+    private GameObject gameOverPanel;
+
+    private bool isGameOver = false;
+
     void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -22,7 +44,16 @@ public class GameManager : MonoBehaviour
         Board board = FindObjectOfType<Board>();
         allCards = board.GetCards();
 
-        StartCoroutine("FliapAllCardsRoutine"); 
+        currentTime = timeLimit;
+        SetCurrentTimeText();
+
+        StartCoroutine("FliapAllCardsRoutine");
+    }
+
+    void SetCurrentTimeText()
+    {
+        int timeSec = Mathf.CeilToInt(currentTime);
+        timeoutText.SetText(timeSec.ToString());
     }
 
     IEnumerator FliapAllCardsRoutine()
@@ -33,12 +64,28 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         FlipAllCards();
         yield return new WaitForSeconds(0.5f);
-        isFlipping=false;
+        isFlipping = false;
+
+        yield return StartCoroutine("CountTimeRoutine");
+    }
+
+    IEnumerator CountTimeRoutine()
+    {
+        while (currentTime > 0)
+        {
+            currentTime -= Time.deltaTime;
+            timeoutSlider.value = currentTime / timeLimit;
+            SetCurrentTimeText();
+
+            yield return null;
+        }
+
+        GameOver(false);
     }
 
     void FlipAllCards()
     {
-        foreach(Card card in allCards)
+        foreach (Card card in allCards)
         {
             card.FlipCard();
         }
@@ -46,13 +93,13 @@ public class GameManager : MonoBehaviour
 
     public void CardCliked(Card card)
     {
-        if (isFlipping)
+        if (isFlipping || isGameOver)
         {
             return;
         }
         card.FlipCard();
 
-        if(flippedCard == null)
+        if (flippedCard == null)
         {
             flippedCard = card;
         }
@@ -65,12 +112,19 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckMatchRoutine(Card card1, Card card2)
     {
-        isFlipping = true;  
+        isFlipping = true;
 
-        if(card1.cardID == card2.cardID)
+        if (card1.cardID == card2.cardID)
         {
             card1.SetMatched();
             card2.SetMatched();
+
+            matchesFound++;
+
+            if (matchesFound == totalMatches)
+            {
+                GameOver(true);
+            }
         }
         else
         {
@@ -86,4 +140,35 @@ public class GameManager : MonoBehaviour
         flippedCard = null;
     }
 
+    void GameOver(bool success)
+    {
+        if (!isGameOver)
+        {
+            isGameOver = true;
+
+            StopCoroutine("CountTimeRoutine");
+
+            if (success)
+            {
+                gameOverText.SetText("Success");
+            }
+            else
+            {
+                gameOverText.SetText("Game over");
+            }
+            Invoke("ShowGameOverPanel", 2f);
+        }
+
+
+    }
+
+    void ShowGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
+    }
+
+    public void ReStart()
+    {
+        SceneManager.LoadScene("SampleScene");
+    } 
 }
